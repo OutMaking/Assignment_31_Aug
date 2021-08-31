@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#include<iostream>
+void thirdLargest(int array,int array_size[])
+{
+int a=array[0];
+for(int i=1;i<array_size;i++)
+if(array[i]>a)
+a=array[i];
+
+int b=INT_MIN;
+for(int i=0;i<array_size;i++)
+if(array[i]>b && array[i]<a)
+b=array[i];
+
+int c=INT_MIN;
+for(int i=0;i<array_size;i++)
+if(array[i]>c && array[i]<b)
+c=array[i];
+cout<<"Third largest num is %d/n"<<c;
+}
+
+int main()
+{
+
+int array[] ={12,13,1,10,34,16};
+int n=sizeof(array)/sizeof(array[0]);
+thirdLargest(arr,n);
+return 0;
+}
