@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Demo {
+    public static void main(String[] args) {
+       String string = "Halo";
+       System.out.println("String: "+string);
+     
+       int position = 1;
+       char replace = 'e';
+       String result = string.substring(0, position) + replace + string.substring(position + 1);
+       System.out.println("String after replacing a character: "+result);
+
+
+    int stringLength = result.length();
+   String letter1 = result.substring (0,1);
+   String lastletter = result.substring ((stringLength-1),(stringLength));
+   String newWord =lastletter.toUpperCase();
+
+
+    System.out.println("String after replacing the 3rd Char in UpperCase : "+result.substring(0,3)+ newWord );
+
+   }
+}
